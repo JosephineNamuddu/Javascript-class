@@ -127,3 +127,132 @@ console.log (person);
 console.log(person["name"]);//Accessing the name properly
 console.log(person.hobbies)
 console.log(person.hobbies[1])//Accessing the second hobby
+
+// Assignment 2 about Scores
+
+let marks = 85;
+
+if (marks >= 80) {
+    console.log("Grade: D1");
+} else if (marks >= 75) {
+    console.log("Grade: D2");
+} else if (marks >= 70) {
+    console.log("Grade: C3");
+} else if (marks >= 65) {
+    console.log("Grade: C4");
+} else if (marks >= 60) {
+    console.log("Grade: C5");
+} else {
+    console.log("Grade: Fail");
+}
+//LOOPS
+// It is an array called scores containing objects with each object having a name and score properties
+let scores = [
+{name: "Josephine", score : 85},
+{name: "Joshua", score : 63},
+{name: "Justine", score : 75},
+{name: "Joan", score : 57},
+{name: "Joseph", score : 39},
+{name: "John", score : 95}
+]
+scores.forEach(student => {
+   let grade;
+   if(student.score >= 90){
+      grade = "A"
+   } else if (student.score >= 80){
+    grade = "B"
+ } else if (student.score >= 70) {
+    grade = "C"
+ }
+ else if(student.score>= 60){
+    grade = "D"
+ }
+ else if (student.score >= 50) {
+    grade = "E"
+ } else{
+    grade = "F"
+ }
+
+ console.log(student.name + ":" + student.score + "and my grade is;" + grade)
+ 
+});
+//Functions
+//Function are reusable blocks of code that perform a specific task. They can take parameters and restore values.
+
+// Function declaration // we use the function keyword to declare a function
+
+function functionName() {
+    //code to be executed
+}
+
+function funcName(parameter){
+    //code to beexecuted
+    return parameter; // returning the parameter
+}
+
+function funcWithParameters(parameter1, parameter2, parameter3) {
+    //code to be executed
+    return parameter1 + parameter2 + parameter3; // returning the sum of the parameters
+}
+
+
+
+
+//LOOPS Assignment
+// 1. For loop: 
+// a for loop is used when you know how many times you want to repeat something.
+//used for initialization
+//condition
+//increment
+//Example incrementing for loop
+for(let i = 1; i<=5;i++){
+    console.log(i);
+}
+for (let i = 0; i < 7; i++){
+    console.log(i);
+}
+// Decremention for loop
+for (let i = 7; i > 0; i--){
+    console.log (i)
+}
+
+const myCars = ["Volvo", "Benz", "kia","Toyota"];
+console.log(myCars);
+const numberOfCars = myCars.length; //This gives you the number of items in the array
+console.log(numberOfCars);
+
+for (let i = 0; i < myCars.length; i++){
+    console.log(myCars[i]);
+}
+for (let car of myCars){
+    function printCarPosition(car){
+        const index = myCars.indexOf(car);
+    console.log("The position of  "  + car + " in the array is " + index);
+    }
+    printCarPosition(car);
+    console.log(car);
+}
+//2. While loop
+
+//while (condition){
+//code to be executed as long as the condition is true}
+
+//incrementing while loop
+let id = 8;
+while (id < 7){
+    console.log("from the while loop", id);
+    id++;
+}
+let password = "";
+while (password !=="1234"){
+password - prompt("please enter the correct password:");
+}
+// 3. Do-while loop
+//do{
+    //code to be executed
+//} while (condition)
+let i = 0;
+do {
+    console.log("From the do-while loop",i);
+    i++;
+} while (i < 7);
