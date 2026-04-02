@@ -243,10 +243,10 @@ while (id < 7){
     console.log("from the while loop", id);
     id++;
 }
-let password = "";
-while (password !=="1234"){
-password - prompt("please enter the correct password:");
-}
+// let password = "";
+// while (password !=="1234"){
+// password - prompt("please enter the correct password:");
+// }
 // 3. Do-while loop
 //do{
     //code to be executed
