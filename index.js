@@ -13,11 +13,10 @@ console.log(age);
 age = 22;
 console.log("My age has changed becouse I am just a girl", age);
 
-
-
-
-
-
+// Const is block scxoper and cannot be updated or redclared.
+const country = "Uganda";
+console.log(country);
+// country = "kenya";  This will throw an error becouse const cannot be redeclared or updated.
 
 
 // Data Types
@@ -26,6 +25,7 @@ console.log("My age has changed becouse I am just a girl", age);
 let greeting = "Hello,How are you";
 console.log (greeting);
 console.log(typeof greeting);
+
 
 // 2. Number
 let x = 10;
@@ -40,6 +40,10 @@ console.log (typeof y);
 // 6.symbol 
 // Explanation of symbol datatype
 // Mathematical operators
+
+// Asignment
+
+
 let a = 5;
 let b = 3;
 console.log (a-b); //subtruction
