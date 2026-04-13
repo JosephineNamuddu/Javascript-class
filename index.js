@@ -260,3 +260,57 @@ do {
     console.log("From the do-while loop",i);
     i++;
 } while (i < 7);
+
+// Arrow functions are more concise ways of creating functions in JavaScript
+// They are often used for short simple functions
+
+//Traditional function expression
+const traditionalFunction = function(){
+    console.log("This is a traditional function");
+}
+traditionalFunction();
+
+function anotherTraditionalFunction(){
+    console.log("This is another traditional function");
+}
+anotherTraditionalFunction();
+//Arrow function expression
+const arrowFunc =()=>{
+    console.log("This is an arrow function");
+}
+arrowFunc();
+
+const add = (a,b)=>{
+    console.log(a+b);
+}
+add(3,4)
+
+//JSON (JavaScript Object Notataion)
+
+//JAvascript Object
+const task = {
+    id:1,
+    tittle: "Complete JavaScript assignment",
+    completed: false
+}
+console.log(task);
+
+//JSON string
+const taskJSON = JSON.stringify(task);
+console.log(taskJSON);
+
+//Parsing JSON string back to JavaScript object
+const parsedTask = JSON.parse(taskJSON);
+console.log(parsedTask);
+
+// Local storage
+//Storing data in local storage
+localStorage.setItem("Name", "Josephine Namuddu");
+localStorage.setItem("task", taskJSON);
+
+//Retrieving data from local storage
+const nameFromStorage = localStorage.getItem("Name");
+console.log("Name from local storage:", nameFromStorage);
+
+const taskFromStorage = localStorage.getItem("task")
+console.log(taskFromStorage);
