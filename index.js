@@ -21,35 +21,64 @@ console.log(country);
 
 // Data Types
 // Javascript has several datatypes including:
-// 1. String 
+
+// 1. String: This is data enclosed in quotes ("",'', or '').
 let greeting = "Hello,How are you";
 console.log (greeting);
 console.log(typeof greeting);
 
+let Town = "Nabbingo"
+console.log(Town)
+console.log (typeof Town)
 
-// 2. Number
+
+// 2. Number: These represent both integers and decimals.
 let x = 10;
 let y = "12"
+let price = 10.99;
 console.log(x);
 console .log (y);
 console.log(typeof x);
 console.log (typeof y);
-// 3. Boolean
-// 4. Undefined
-// 5. Null 
-// 6.symbol 
-// Explanation of symbol datatype
-// Mathematical operators
+ 
 
-// Asignment
+// 3. Boolean : This represents true or false
+let isLoggedIn = true;
+let isAdmin = false;
 
 
+// 4. Undefined: A variable declared but not assigned a value.
+// let x;
+// console.log(x); //undefined
+ 
+
+// 5. Null: Represents an intentional absences of value.
+let selectedUser = null;
+
+// 6. BigInt: Used for very large integers
+ let bigNumber = 123456789101123456789013246n;
+
+// 6.symbol: These are used to create unique identifiers.
+// let id = symbol(userId);
+
+// // Mathematical operators: These are used to perform arithmetic calculations on numbers - just like in maths
+//  They include Addition, subtruction, Multiplication,Division,Modules, Exponentiations, Increments, Decrements
 let a = 5;
 let b = 3;
 console.log (a-b); //subtruction
 console.log (a+b); //addition
 console.log (a/b); //Division
-console.log (a%b); //Modules
+console.log (a%b); //Modulus: These return the remainder after division and are useful for checking even or odd numbers
+console.log (a**b); // Exponentiation
+console.log (a++);//Increment
+console.log(a--);// Decrement
+
+//NOTE: + can be used to join strings (concatenations)
+console.log(5+"5"); //"55" (string!)
+
+
+
+
 //conditionals in javascript
 // if statement
 //definition of if statement
