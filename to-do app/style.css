@@ -1,10 +1,83 @@
-.body{
-    font-family: Arial, Helvetica, sans-serif;
-    Padding: 20px
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
-.botton{
-    margin-left: 10px;
+
+body {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-li{
-    margin: 10px 0;
+
+/* Main container */
+.container {
+  background:lightsalmon;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Input section */
+.input-section {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  background: #4facfe;
+  color: purple;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #007bff;
+}
+
+/* Todo list */
+ul {
+  list-style: none;
+  margin-top: 15px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 8px;
+  background: lightcoral;
+  border-radius: 5px;
+}
+
+/* Completed task */
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .container {
+    width: 95%;
+  }
 }

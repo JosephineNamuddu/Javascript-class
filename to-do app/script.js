@@ -1,45 +1,50 @@
-const input =document.getElementById("taskInput")
-const addBtn =document.getElementById("addBtn")
-const list = document.getElementById("taskList")
-//CRUD - Create,Read,Update, Delete
+const input = document.getElementById("todo-input");
+const button = document.getElementById("add-btn");
+const list = document.getElementById("todo-list");
 
-// Create - Create a new task
-addBtn.addEventListener("click",function(){
-    const newTask = input.value.trim();
+button.addEventListener("click", addTodo);
 
-    if(newTask===""){
-        alert("Please enter a task");
-        return;
-    }
-const li = document.createElement("li");
-li.textContent = newTask;
-list.appendChild(li);
+function addTodo() {
+  const task = input.value.trim();
 
-const editBtn = document.createElement("button");
-editBtn.textContent = "Edit"
-editBtn.addEventListener("click",function(){
-    const updatedTask = prompt("Enter the updated task", li.innerText);
-    if(updatedTask !==null && updatedTask.trim()!==""){
-        li.textContent = updatedTask.trim();
-        li.appendChild(editBtn)
-    }
-})
-li.appendChild(editBtn)
+  if (task === "") return;
 
-input.value="";
+  const li = document.createElement("li");
 
-// Read - display task(already done by default)
-// Edit - update a task
+  li.innerHTML = `
+    <span>${task}</span>
+    <div>
+      <button onclick="toggleComplete(this)">✔</button>
+      <button onclick="deleteTodo(this)">❌</button>
+    </div>
+  `;
 
-//Delete button for each task
-const deleteBtn = document.createElement("button");
-deleteBtn.textContent = "Delete"
-li.appendChild(deleteBtn);
-deleteBtn.addEventListener("click",function(){
-    li.remove();
-})
+  list.appendChild(li);
+  input.value = "";
+}
 
+function deleteTodo(btn) {
+  btn.parentElement.parentElement.remove();
+}
 
-})
+function toggleComplete(btn) {
+  const li = btn.parentElement.parentElement;
+  li.classList.toggle("completed");
+}
 
+function saveTasks() {
+  localStorage.setItem("todos", list.innerHTML);
+}
 
+function loadTasks() {
+  list.innerHTML = localStorage.getItem("todos") || "";
+}
+
+button.addEventListener("click", () => {
+  addTodo();
+  saveTasks();
+});
+
+list.addEventListener("click", saveTasks);
+
+window.onload = loadTasks;

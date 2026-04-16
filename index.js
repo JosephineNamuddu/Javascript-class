@@ -128,12 +128,13 @@ if (mark >=70){
 //7. Greater than or equal to (>=)
 //8. Less than or equal to(<=)
 
-//Arrays
-
+//Arrays: This refers to a way to store multiple values in a single variable.
+// in simple terms it is a list. it is a data structure holding multiple values at once.
 ["Volvo", "Toyota", "Benz", "Kia",]
 [1,2,3,4,5]
-//["Josephine" ,25, "uganda",true, null, undefined{name:"John"}]
-let cars = ("Volvo", "Toyota", "Benz", "Kia")
+//empty array []
+//Mixed Array: This has more than one datatype["Josephine" ,25, "uganda",true, null, undefined{name:"John"}]
+let cars = ("Volvo","Toyota","Benz","Kia")
 console.log(cars);
 console.log(cars[0]); 
 
@@ -143,7 +144,9 @@ console.log(mixedArray[6])
 
 //objects
 {}//an empty object
-
+//in an object, items are stored in pairs ie a variable and its value
+// property also called key would be name/age etc. in a pair, the property is a variable and a name is avalue as seen below. 
+//if you want to create variable with very many properties like a person, it is better to use an object. You van have very many objects within an object and arrays within.
 let person = {
 name:"josephine",
 age : 35,
@@ -163,23 +166,27 @@ console.log(person.hobbies[1])//Accessing the second hobby
 
 // Assignment 2 about Scores
 
-let marks = 85;
+let marks =85;
 
-if (marks >= 80) {
+//If statements are used to run code only when a certain condition is true.
+//eg if(condition){code runs if the condition is true}
+if (marks >= 85) {
     console.log("Grade: D1");
-} else if (marks >= 75) {
+}else if(marks >= 75) {
     console.log("Grade: D2");
-} else if (marks >= 70) {
+}else if (marks >= 70) {
     console.log("Grade: C3");
-} else if (marks >= 65) {
+}else if (marks >= 65) {
     console.log("Grade: C4");
-} else if (marks >= 60) {
+}else if(marks >= 60) {
     console.log("Grade: C5");
 } else {
     console.log("Grade: Fail");
 }
+
+//Please note the grading system uses else if and only one grade is printed the one that satisfys the if condition.
 //LOOPS
-// It is an array called scores containing objects with each object having a name and score properties
+// It is an array of scores containing objects with each object having a name and score properties
 let scores = [
 {name: "Josephine", score : 85},
 {name: "Joshua", score : 63},
@@ -206,7 +213,7 @@ scores.forEach(student => {
     grade = "F"
  }
 
- console.log(student.name + ":" + student.score + "and my grade is;" + grade)
+ console.log(student.name + ":" + student.score + ":and my grade is;" + grade)
  
 });
 //Functions
@@ -227,6 +234,18 @@ function funcWithParameters(parameter1, parameter2, parameter3) {
     //code to be executed
     return parameter1 + parameter2 + parameter3; // returning the sum of the parameters
 }
+// Example of grading with functions Keyword-FunctionName(Parameters){code to be executed}
+function getGrade(marks){
+if (marks>=85)return"D1";
+if (marks>=75)return"D2";
+if (marks>=70)return"C3";
+if (marks>=65)return"C4";
+if (marks>=60)return"C5";
+
+return "Fail";
+}
+console.log("Grade:",getGrade(85));
+
 
 
 
