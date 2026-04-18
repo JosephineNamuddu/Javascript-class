@@ -145,8 +145,8 @@ console.log(mixedArray[6])
 //objects
 {}//an empty object
 //in an object, items are stored in pairs ie a variable and its value
-// property also called key would be name/age etc. in a pair, the property is a variable and a name is avalue as seen below. 
-//if you want to create variable with very many properties like a person, it is better to use an object. You van have very many objects within an object and arrays within.
+// A property also called key would be name/age etc. in a pair, the property is a variable and a name is avalue as seen below. 
+//if you want to create an object with very many variables like a person, it is better to use an object. You can have very many objects within an object and arrays within.
 let person = {
 name:"josephine",
 age : 35,
@@ -183,10 +183,23 @@ if (marks >= 85) {
 } else {
     console.log("Grade: Fail");
 }
+//example 2
+let score = 75;
+
+if(score>=90){
+    console.log("Grade A");
+}else if(score>=70){
+    console.log("Grade B");
+}else{
+    console.log("keep trying");
+}
+
 
 //Please note the grading system uses else if and only one grade is printed the one that satisfys the if condition.
+
 //LOOPS
 // It is an array of scores containing objects with each object having a name and score properties
+// Loops are used for repeating actions
 let scores = [
 {name: "Josephine", score : 85},
 {name: "Joshua", score : 63},
@@ -212,7 +225,7 @@ scores.forEach(student => {
  } else{
     grade = "F"
  }
-
+//concartenation
  console.log(student.name + ":" + student.score + ":and my grade is;" + grade)
  
 });
@@ -226,7 +239,7 @@ function functionName() {
 }
 
 function funcName(parameter){
-    //code to beexecuted
+    //code to be executed
     return parameter; // returning the parameter
 }
 
@@ -245,9 +258,10 @@ if (marks>=60)return"C5";
 return "Fail";
 }
 console.log("Grade:",getGrade(85));
-
-
-
+console.log("Grade:",getGrade(75));
+console.log("Grade:",getGrade(70));
+console.log("Grade:",getGrade(65));
+console.log("Grade:",getGrade(60));
 
 
 //LOOPS Assignment
