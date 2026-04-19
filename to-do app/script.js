@@ -2,6 +2,7 @@ const input = document.getElementById("todo-input");
 const button = document.getElementById("add-btn");
 const list = document.getElementById("todo-list");
 
+
 button.addEventListener("click", addTodo);
 
 function addTodo() {
@@ -32,12 +33,14 @@ function toggleComplete(btn) {
   li.classList.toggle("completed");
 }
 
-function saveTasks() {
-  localStorage.setItem("todos", list.innerHTML);
-}
 
+//saving tasks on localStorage
+function saveTasks(tasks) {
+  localStorage.setItem("todos", JSON.stringify(tasks));
+}
+//Loading tasks
 function loadTasks() {
-  list.innerHTML = localStorage.getItem("todos") || "";
+const tasks = JSON.parse(localStorage.getItem("todos"));
 }
 
 button.addEventListener("click", () => {

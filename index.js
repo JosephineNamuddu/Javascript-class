@@ -200,6 +200,9 @@ if(score>=90){
 //LOOPS
 // It is an array of scores containing objects with each object having a name and score properties
 // Loops are used for repeating actions
+
+
+// Foreach function calls the call back function one time on each element on an array. it uses parenthesis.
 let scores = [
 {name: "Josephine", score : 85},
 {name: "Joshua", score : 63},
@@ -262,6 +265,8 @@ console.log("Grade:",getGrade(75));
 console.log("Grade:",getGrade(70));
 console.log("Grade:",getGrade(65));
 console.log("Grade:",getGrade(60));
+
+//
 
 
 //LOOPS Assignment
